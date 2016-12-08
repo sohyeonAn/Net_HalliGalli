@@ -24,6 +24,7 @@ public class ClientStart extends JFrame implements ActionListener, Runnable, Mou
 	String roomName;
 	int checkPwd, idExist = 1;
 
+	
 	String serverIp = "localhost"; // server Ip addr
 	CardLayout card = new CardLayout(); // 창 전환을 위해 필요합니다!
 	Login login = new Login(); // 로그인창
