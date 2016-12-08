@@ -74,13 +74,13 @@ public class GameWindow2 extends JPanel{
       seethI.setBounds(430,320,50,50);
       secretI.setBounds(530,320,50,50);
       
-      seethI.setBorderPainted(true);
+      seethI.setBorderPainted(false);
       seethI.setContentAreaFilled(false);
-      changeI.setBorderPainted(true);
+      changeI.setBorderPainted(false);
       changeI.setContentAreaFilled(false);
-      secretI.setBorderPainted(true);
+      secretI.setBorderPainted(false);
       secretI.setContentAreaFilled(false);
-      autoI.setBorderPainted(true);
+      autoI.setBorderPainted(false);
       autoI.setContentAreaFilled(false);
       
       p.setOpaque(false);
@@ -130,7 +130,6 @@ public class GameWindow2 extends JPanel{
       //게임의 상태 알려줌.
       info.setBounds(297,32,400,38);
       info.setHorizontalAlignment(SwingConstants.CENTER);
-      info.setBorder(border);
       info.setForeground(Color.white);
       
       
@@ -138,45 +137,36 @@ public class GameWindow2 extends JPanel{
       laPlayer[0] = new JLabel("Player1");
       laPlayer[0].setBounds(80,268,100,35);
       laPlayer[0].setHorizontalAlignment(SwingConstants.CENTER);
-      laPlayer[0].setBorder(border);
       
       laPlayer[2] = new JLabel("Player3");
       laPlayer[2].setBounds(80,628,100,35);
       laPlayer[2].setHorizontalAlignment(SwingConstants.CENTER);
-      laPlayer[2].setBorder(border);
-      
+
       laPlayer[1] = new JLabel("Player2");
       laPlayer[1].setBounds(813,268,100,35);
       laPlayer[1].setHorizontalAlignment(SwingConstants.CENTER);
-      laPlayer[1].setBorder(border);
-      
+
       laPlayer[3] = new JLabel("Player4");
       laPlayer[3].setBounds(813,628,100,35);
       laPlayer[3].setHorizontalAlignment(SwingConstants.CENTER);
-      laPlayer[3].setBorder(border);
-      
+
       
       //display score
       score[0] = new JLabel("score 1");
       score[0].setBounds(80,315,100,35);
       score[0].setHorizontalAlignment(SwingConstants.CENTER);
-      score[0].setBorder(border);
-   
+
       score[1] = new JLabel("score 2");
       score[1].setBounds(813,315,100,35);
       score[1].setHorizontalAlignment(SwingConstants.CENTER);
-      score[1].setBorder(border);
 
       score[2] = new JLabel("score 3");
       score[2].setBounds(80,674,100,35);
       score[2].setHorizontalAlignment(SwingConstants.CENTER);
-      score[2].setBorder(border);
             
       score[3] = new JLabel("score 4");
       score[3].setBounds(813,674,100,35);
       score[3].setHorizontalAlignment(SwingConstants.CENTER);
-      score[3].setBorder(border);
-      
       
       //display combo
       for(int i=0;i<4;i++)
@@ -196,19 +186,19 @@ public class GameWindow2 extends JPanel{
       
       //basic button(start, ready, exit)
       start.setBounds(640,545,76,42);
-      start.setBorderPainted(true);
+      start.setBorderPainted(false);
       start.setContentAreaFilled(false);
       
       ready.setBounds(640,620,76,42);
-      ready.setBorderPainted(true);
+      ready.setBorderPainted(false);
       ready.setContentAreaFilled(false);
       
       exit.setBounds(640,695,76,42);
-      exit.setBorderPainted(true);
+      exit.setBorderPainted(false);
       exit.setContentAreaFilled(false);
       
       bell.setBounds(476,271,60,60);
-      bell.setBorderPainted(true);
+      bell.setBorderPainted(false);
       bell.setContentAreaFilled(false);
       
       setLayout(null);
@@ -368,15 +358,6 @@ public class GameWindow2 extends JPanel{
          }
          repaint();
       }
-
-//      public void seethough()
-//      {
-//         //see through 아이템 사용시 이미지.
-//          tmpSeeF = new ImageIcon("img/BLS.jpg");
-//         Image tmp = tmpSeeF.getImage();
-//         Image tmp2 = tmp.getScaledInstance(50, 70, java.awt.Image.SCALE_DEFAULT);
-//         seeF = new ImageIcon(tmp2);
-//      }
 
    protected void paintComponent(Graphics g)
    {
