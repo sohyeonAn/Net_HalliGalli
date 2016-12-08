@@ -24,9 +24,9 @@ public class GameServer implements Runnable {
 	Socket s;
 	ServerSocket server;
 
-	static ArrayList<String> waitClients = new ArrayList<String>();
-	static HashMap<String, ArrayList<String>> roomInf = new HashMap<String, ArrayList<String>>();
-	static HashMap<String, ArrayList<BufferedWriter>> roomWriter = new HashMap<String, ArrayList<BufferedWriter>>();
+	static ArrayList<String> waitClients = new ArrayList<String>();//대기실 클라이언트 아이디 저장
+	static HashMap<String, ArrayList<String>> roomInf = new HashMap<String, ArrayList<String>>();//방이름에 따른 그 방에 있는 클라이언트 저장
+	static HashMap<String, ArrayList<BufferedWriter>> roomWriter = new HashMap<String, ArrayList<BufferedWriter>>();//
 	static ArrayList<BufferedWriter> waitWriters = new ArrayList<BufferedWriter>();
 	
 	
@@ -43,10 +43,7 @@ public class GameServer implements Runnable {
 		try {
 			InetAddress addr = InetAddress.getByName("localhost");
 
-			server = new ServerSocket(1111, 100, addr); // port number ,
-														// max_server
-														// connection, IP
-														// address
+			server = new ServerSocket(1111, 100, addr); 
 			System.out.println("NEW Server Start...");
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
